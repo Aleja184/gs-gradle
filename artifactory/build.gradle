@@ -13,14 +13,16 @@ repositories {
 
 // tag::jar[]
 jar {
-    baseName = 'gs-gradle'
-    version =  '0.1.0'
+    archiveBaseName = 'gs-gradle'
+    archiveVersion = '0.1.0'
 }
 // end::jar[]
 
 // tag::dependencies[]
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 dependencies {
     compile "joda-time:joda-time:2.2"
